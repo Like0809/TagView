@@ -214,6 +214,7 @@ public class TagView extends View {
     }
 
     private void updateTags() {
+        mTags.clear();
         if (!TextUtils.isEmpty(mTagString)) {
             String tags[] = mTagString.split(",");
             for (String tag : tags) {
@@ -253,6 +254,11 @@ public class TagView extends View {
 
     public TagBuilder newTag(String newTagString) {
         return new TagBuilder(this, newTagString, mTextColor, mTextSize, mPadding, mTagBackground);
+    }
+
+    public void removeAll() {
+        mTags.clear();
+        requestLayout();
     }
 
     public static class TagBuilder {
