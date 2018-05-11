@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagView">
+        <attr name="tv_horizontal_spacing" format="dimension" />
+        <attr name="tv_vertical_spacing" format="dimension" />
+        <attr name="tv_text_color" format="color" />
+        <attr name="tv_text_size" format="dimension" />
+        <attr name="tv_tag_background" format="reference" />
+        <attr name="tv_tags" format="string" />
+        <attr name="tv_max_lines" format="integer" />
+        <attr name="tv_padding" format="dimension" />
+    </declare-styleable>
+</resources>

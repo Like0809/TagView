@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <com.like.widget.TagView
+            android:id="@+id/tagView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:tv_text_color="@color/text_color" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="字体颜色"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/red_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="红色文字"
+            android:textColor="#ff0000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/blue_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="蓝色文字"
+            android:textColor="#0000ff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/green_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="绿色文字"
+            android:textColor="#00ff00"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="字体大小"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/SP12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="12SP"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/SP18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="18SP"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/SP32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#aaaaaa"
+            android:padding="4dp"
+            android:text="32SP"
+            android:textSize="32sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="背景"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/no_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="无背景"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/color_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#f90"
+            android:padding="4dp"
+            android:text="纯色背景"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/shape_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/background"
+            android:padding="4dp"
+            android:text="Shape背景"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="状态"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/background"
+            android:padding="4dp"
+            android:text="未选中"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_selected"
+            android:padding="4dp"
+            android:text="已选中"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="内边距"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/padding4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:padding="4dp"
+            android:text="内边距4DP"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/padding8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="内边距8DP"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>
