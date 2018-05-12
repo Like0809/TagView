@@ -41,6 +41,7 @@ public class TagView extends View {
     private float mTouchX;
     private float mTouchY;
     private Tag mTouchTag;
+    private int mBreakItem;
 
     public TagView(Context context) {
         this(context, null);
@@ -119,7 +120,9 @@ public class TagView extends View {
                 lineHeight = Math.max(lineHeight, mTextRect.height() + 2 * tag.getPadding());
             } else {
                 lines++;
-                if (lines >= mMaxLines) break;
+                if (lines >= mMaxLines) {
+                    break;
+                }
                 totalHeight += lineHeight + mVerticalSpacing;
                 rect.top = totalHeight;
                 rect.left = getPaddingLeft();
@@ -127,6 +130,7 @@ public class TagView extends View {
                 lineWidth = getPaddingLeft() + tagWidth - mHorizontalSpacing;
                 lineHeight = mTextRect.height() + 2 * tag.getPadding();
             }
+            mBreakItem = i;
             rect.bottom = rect.top + mTextRect.height() + 2 * tag.getPadding();
             rect.right = Math.min(rect.left + 2 * tag.getPadding() + textWidth, widthSize - getPaddingRight());
         }
@@ -152,7 +156,9 @@ public class TagView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        for (Tag tag : mTags) {
+        for (int i = 0, childNum = mTags.size(); i < childNum; i++) {
+            if (i > mBreakItem) break;
+            Tag tag = mTags.get(i);
             Rect rect = tag.getRect();
             Drawable drawable = tag.getBackground();
             if (drawable == null) {
