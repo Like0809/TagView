@@ -79,6 +79,7 @@ public class TagView extends View {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setTextSize(mTextSize);
+        updateTags();
     }
 
 
@@ -226,6 +227,8 @@ public class TagView extends View {
             for (String tag : tags) {
                 newTag(tag).add();
             }
+            requestLayout();
+            invalidate();
         }
     }
 
@@ -246,6 +249,15 @@ public class TagView extends View {
         if (newTagString == null) return;
         mTagString = newTagString;
         updateTags();
+    }
+
+    public void setTags(List<Tag> tags) {
+        if (tags != null && mTags != tags) {
+            mTags.clear();
+            mTags.addAll(tags);
+            requestLayout();
+            invalidate();
+        }
     }
 
     public void addTags(List<Tag> tags) {
