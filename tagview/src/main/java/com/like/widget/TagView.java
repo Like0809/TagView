@@ -140,13 +140,18 @@ public class TagView extends View {
 
         if (widthMode == MeasureSpec.EXACTLY) {
             totalWidth = widthSize;
-        } else {
+        } else if (widthMode == MeasureSpec.AT_MOST) {
             totalWidth = Math.min(totalWidth + getPaddingRight(), widthSize);
+        } else {
+            totalWidth = totalHeight + getPaddingRight();
         }
+
         if (heightMode == MeasureSpec.EXACTLY) {
             totalHeight = heightSize;
-        } else {
+        } else if (heightMode == MeasureSpec.AT_MOST) {
             totalHeight = Math.min(totalHeight + getPaddingBottom(), heightSize);
+        } else {
+            totalHeight = totalWidth + getPaddingBottom();
         }
         setMeasuredDimension(totalWidth, totalHeight);
     }
